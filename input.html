@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <h2>Upload CSV (96 rows)</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

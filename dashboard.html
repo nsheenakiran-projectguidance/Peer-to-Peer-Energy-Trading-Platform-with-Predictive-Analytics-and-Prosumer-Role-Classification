@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>Welcome {{ current_user.username }}</h2>
+    <p><strong>Role:</strong> {{ current_user.role }}</p>
+    <p><strong>Energy Balance:</strong> {{ current_user.energy_balance }} kWh</p>
+</div>
+
+{% endblock %}

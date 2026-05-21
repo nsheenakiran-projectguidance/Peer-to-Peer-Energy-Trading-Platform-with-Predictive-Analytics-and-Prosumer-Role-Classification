@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>P2P Energy Trading</h2>
+
+    <form method="POST">
+        <label>Select Buyer</label>
+        <select name="buyer">
+            {% for user in users %}
+                {% if user.id != current_user.id %}
+                <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+
+        <input type="number" step="0.1" name="amount" placeholder="Energy Amount (kWh)" required>
+        <input type="number" step="0.1" name="price" placeholder="Price per kWh" required>
+
+        <button type="submit">Sell Energy</button>
+    </form>
+
+</div>
+
+{% endblock %}

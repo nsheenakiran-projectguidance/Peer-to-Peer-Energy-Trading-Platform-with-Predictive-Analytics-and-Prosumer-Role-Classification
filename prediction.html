@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="page-wrapper">
+
+    <h2 class="page-title">Prediction Result</h2>
+
+    <div class="card">
+        <p><b>Consumption:</b> {{ consumption }} kWh</p>
+        <p><b>Production:</b> {{ production }} kWh</p>
+        <p><b>Role:</b> {{ role }}</p>
+        <p><b>Energy Balance:</b> {{ balance }} kWh</p>
+    </div>
+
+    {% if graph %}
+    <div class="card graph-card">
+        <h3>24 Hour Graph</h3>
+        <img src="{{ graph }}" class="graph-img">
+    </div>
+    {% endif %}
+
+    <div class="btn-container">
+        <a href="/p2p" class="btn">Go to Trading</a>
+    </div>
+
+</div>
+
+{% endblock %}
