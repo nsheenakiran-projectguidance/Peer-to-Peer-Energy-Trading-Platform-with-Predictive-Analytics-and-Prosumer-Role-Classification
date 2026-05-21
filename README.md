@@ -59,20 +59,25 @@ ProNetEnergy/
 │   └── images/
 │
 ├── templates/
-│   ├── index.html
+│   ├── base.html
 │   ├── login.html
 │   ├── register.html
 │   ├── dashboard.html
-│   ├── trading.html
+│   ├── p2p.html
+|   ├── input.html 
+    ├── layout.html
 │   └── prediction.html
+|    
 │
 ├── dataset/
-│   └── energy_data.csv
+│   └── kerala_energy_preprocessed.csv
 │
 ├── model/
-│   └── trained_model.pkl
-│
-└── uploads/
+│   ├── solar_gradient_boosting_model.pkl
+|   ├── gru_consumption_model.h5
+|   ├── consumption_scalar_X.pkl
+|   ├── consumption_scalar_y.pkl
+
 
 ---
 
